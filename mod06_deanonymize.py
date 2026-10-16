@@ -18,12 +18,27 @@ def link_records(anon_df, aux_df):
       anon_id, matched_name
     containing ONLY uniquely matched records.
     """
-    raise NotImplementedError
+    # assign the identifiers
+    identifiers = ["age", "gender", "zip3"]
+
+    # filter out only the records that have a unique combination of identifiers
+    anonUniques = anon_df.loc[
+        ~anon_df.duplicated(subset=identifiers, keep=False)
+    ]
+    auxUniques= aux_df.loc[
+        ~aux_df.duplicated(subset=identifiers, keep=False)
+    ]
+
+    # merge the unique lists into the matched one
+    matches = anonUniques.merge(
+        auxUniques,
+        on=identifiers,
+        how="inner",
+        validate="one_to_one",
+    )
+    return matches[["anon_id", "name"]].rename(columns={"name": "matched_name"})
 
 
 def deanonymization_rate(matches_df, anon_df):
-    """
-    Compute the fraction of anonymized records
-    that were uniquely re-identified.
-    """
-    raise NotImplementedError
+    # simple fraction calculation
+    return len(matches_df) / len(anon_df)
