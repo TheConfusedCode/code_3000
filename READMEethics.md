@@ -1,0 +1,5 @@
+As a student and engineer in the computing field, I aim to develop technology that supports and enhances human existence, and thus have a responsibility to ensure that I the technologies I work with do not trade human wellbeing or human existence merely for 'advancement solely for advancement's sake' or for profit. 
+
+In this regard, I will ensure these technologies I work on have a clearly defined use cases that fulfill the goal of enhancing human existence, and that the risks are clearly understood not just by those who seek to use the technology, but also by those who might be affected by it. 
+
+To ensure I meet these obligations to myself, others, and humanity writ large, I will take the time to make sure I understand my role in the projects to which I am assigned, and understand the effects that they might have, so that I am able to understand where any risks might lie, be able to speak up when I see potential ethics problems, and ultimately be able to say no and walk away should I be assigned to projects that do not align with my ethical standards. 
